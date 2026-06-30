@@ -7,6 +7,7 @@
 
     <link rel="stylesheet" href="assets/styles/header.css">
     <link rel="stylesheet" href="assets/styles/contact.css">
+    <link rel="stylesheet" href="assets/styles/footer.css">
 
     <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
@@ -272,7 +273,7 @@
 
 
 
-<?php // include 'assets/components/footer.php'; ?>
+<?php include 'assets/components/footer.php'; ?>
 
 
 <script src="assets/js/header.js"></script>
