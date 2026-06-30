@@ -20,8 +20,8 @@
             <!-- Desktop Menu -->
             <ul class="main-menu">
                 <li><a href="index.php" class="menu-link">Home</a></li>
-                <li><a href="about.html" class="menu-link">About</a></li>
-                <li><a href="services.html" class="menu-link">Services</a></li>
+                <li><a href="about.php" class="menu-link">About</a></li>
+                <li><a href="services.php" class="menu-link">Services</a></li>
                 <li><a href="projects.php" class="menu-link">Projects</a></li>
                 <li><a href="gallery.php" class="menu-link">Gallery</a></li>
                 <li><a href="contact.php" class="menu-link">Contact</a></li>
