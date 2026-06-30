@@ -384,3 +384,10 @@ body{
     padding-left:10px;
 
 }
+
+.container {
+  background-color: #071426;
+  padding: 20px;
+  border-radius: 16px; /* optional for smooth look */
+  color: #ffffff; /* text visibility on dark background */
+}

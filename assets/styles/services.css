@@ -1,0 +1,627 @@
+
+/* ===================================================
+   SERVICE CARD ICON (Desktop + Tablet + Mobile)
+=================================================== */
+/*Margin */
+body{
+    margin:0;
+    padding:0;
+}
+.container{
+    width:90%;
+    max-width:1400px;
+    margin:40px auto;
+    padding:0 20px;
+    background-color: white;
+}
+
+.section{
+    padding:60px 0;
+}
+
+
+ .service-card:hover::before{
+    transform:scale(1);
+} 
+
+ .service-card{
+    background:var(--color-white);
+    border:2px solid var(--color-border);
+    color:var(--color-text);
+    border-radius:25px;
+    box-shadow:0 15px 35px rgba(11,31,58,.12);
+    transition:.5s ease;
+} 
+
+ .service-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 25px 60px rgba(11,31,58,.25);
+} 
+
+/* Service Card */
+ .service-card{
+    position: relative;
+    background: #fff;
+    border-radius: 20px;
+    padding: 30px;
+    overflow: hidden;
+    height: 280px;
+    transition: all .5s ease;
+    cursor: pointer;
+    box-shadow: 0 10px 30px rgba(0,0,0,.12);
+} 
+
+/* Expand when cursor is over the card */
+.service-card:hover{
+    height: auto;
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(11,31,58,.25);
+} 
+
+
+
+/* Show content automatically on hover */
+.service-card:hover .more-content{
+    display: block;
+}
+
+/* Smooth fade animation */
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.more-content li{
+    margin:8px 0;
+    color:#555;
+    line-height:1.6;
+}
+
+
+/* ===========================
+   PREMIUM SERVICE CARD
+=========================== */
+
+.service-card{
+    position:relative;
+    width:360px;
+    height:360px;
+    background:#ffffff;
+    border-radius:25px;
+    overflow:hidden;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    padding:35px;
+    cursor:pointer;
+    border:3px solid rgba(10,77,219,.15);
+    box-shadow:
+    0 15px 40px rgba(0,0,0,.08);
+    transition:.6s ease;
+}
+
+.service-card:hover{
+    width:650px;
+    height:450px;
+    box-shadow:
+    0 25px 60px rgba(10,77,219,.30);
+}
+ 
+/* ===========================
+   TITLE
+=========================== */
+
+.service-card h3{
+
+    position:relative;
+    z-index:2;
+    margin-top:25px;
+    font-size:28px;
+    font-weight:700;
+    transition:.5s;
+
+} 
+
+.service-card:hover h3{
+
+    color:yellowgreen;
+    transform:translate(-180px,-140px);
+
+}
+
+/* ===========================
+   DESCRIPTION
+=========================== */
+
+.service-card p{
+
+    position:relative;
+    z-index:2;
+    text-align:center;
+    margin-top:15px;
+    /* color:#555; */
+    line-height:1.6;
+    transition:.5s;
+}
+
+.service-card:hover p{
+
+    width:260px;
+    color:#fff;
+    text-align:left;
+    transform:translate(-135px,-130px);
+
+}
+
+/* ===========================
+   MORE CONTENT
+=========================== */
+
+.more-content{
+
+    position:absolute;
+    right:-380px;
+    top:40px;
+    width:300px;
+    height:360px;
+    overflow:auto;
+    padding-right:10px;
+    opacity:0;
+    transition:.6s;
+    z-index:5;
+    color:#fff;
+
+}
+
+.service-card:hover .more-content{
+    right:25px;
+    opacity:1;
+}
+
+/* Scroll */
+
+.more-content::-webkit-scrollbar{
+    width:6px;
+}
+.more-content::-webkit-scrollbar-thumb{
+    background:#fff;
+    border-radius:20px;
+}
+
+/* Heading */
+
+.more-content h4{
+
+    font-size:18px;
+    margin:18px 0 10px;
+    color:#fff;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+.service-card{
+
+width:100%;
+height:auto;
+padding:30px;
+
+}
+
+.service-card:hover{
+
+width:100%;
+height:auto;
+
+}
+
+.service-card:hover h3,
+.service-card:hover p,
+.service-card:hover .service-card__icon{
+transform:none;
+}
+
+.more-content{
+
+position:relative;
+right:0;
+top:0;
+width:100%;
+height:auto;
+opacity:1;
+color:#fff;
+margin-top:25px;
+
+}
+
+}
+
+/* ===================================================
+   SERVICES SECTION
+=================================================== */
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:30px;
+    margin-top:50px;
+    align-items:stretch;
+}
+
+/* ===================================================
+   HEADINGS
+=================================================== */
+
+.service-card h3{
+    font-size:24px;
+    font-weight:700;
+    color:#222;
+    margin-bottom:15px;
+}
+
+
+/* ===================================================
+   MORE CONTENT
+=================================================== */
+
+.more-content{
+    display:none;
+    margin-top:20px;
+    padding-top:20px;
+    border-top:1px solid #eee;
+}
+
+.service-card.active .more-content{
+    display:block;
+    animation:fadeIn .35s ease;
+}
+
+@keyframes fadeIn{
+
+    from{
+        opacity:0;
+        transform:translateY(-10px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+.more-content h4{
+    margin:20px 0 12px;
+    color:#222;
+    font-size:18px;
+    font-weight:600;
+}
+
+.more-content ul,
+.more-content ol{
+    padding-left:20px;
+    margin-bottom:20px;
+}
+
+.more-content li{
+    color:#555;
+    line-height:1.8;
+    margin-bottom:8px;
+}
+
+
+/* ===================================================
+   SECTION TITLE
+=================================================== */
+
+.eyebrow{
+    display:inline-block;
+    color:#0066cc;
+    font-size:14px;
+    font-weight:700;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    margin-bottom:12px;
+}
+
+.section-heading{
+    font-size:42px;
+    font-weight:700;
+    color:#222;
+    margin-bottom:20px;
+}
+
+.section-sub{
+    max-width:700px;
+    margin:0 auto;
+    color:#666;
+    line-height:1.8;
+    font-size:17px;
+}
+
+/* ===================================================
+   RESPONSIVE
+=================================================== */
+
+/* Laptop */
+
+@media (max-width:1200px){
+
+    .services-grid{
+        grid-template-columns:repeat(3,1fr);
+        gap:25px;
+    }
+
+}
+
+/* Tablet */
+
+@media (max-width:992px){
+
+    .services-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .section-heading{
+        font-size:36px;
+    }
+
+}
+
+/* Mobile */
+
+@media (max-width:768px){
+
+    .services-grid{
+        grid-template-columns:1fr;
+        gap:20px;
+    }
+
+    .service-card{
+        padding:24px;
+    }
+
+    .section-heading{
+        font-size:30px;
+    }
+
+    .section-sub{
+        font-size:16px;
+    }
+
+    .service-card h3{
+        font-size:22px;
+    }
+
+}
+
+/* Small Mobile */
+
+@media (max-width:480px){
+
+    .service-card{
+        padding:20px;
+    }
+
+    .service-card__icon{
+        width:55px;
+        height:55px;
+    }
+
+    .service-card__icon svg{
+        width:26px;
+        height:26px;
+    }
+
+    .service-card h3{
+        font-size:20px;
+    }
+
+    .service-card p{
+        font-size:15px;
+    }
+    .section-heading{
+        font-size:26px;
+    }
+
+}
+
+/* Hover */
+.service-card:hover{
+    background: var(--color-primary);
+    border-color: var(--color-secondary);
+    transform: translateY(-8px);
+}
+
+/* Icon */
+.service-card__icon{
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+    background: var(--color-secondary);
+    color: var(--color-primary-dark);
+}
+
+/* Heading */
+.service-card h3{
+    color: var(--color-secondary);
+    text-align: center;
+}
+
+/* Description */
+.service-card p{
+    color: #d1d5db;
+    text-align: center;
+}
+
+/* ===================================================
+   Tablet (768px - 1199px)
+=================================================== */
+
+@media (max-width:1199px){
+
+    .service-card{
+        padding-top:100px;
+    }
+
+    .service-card__icon{
+        width:65px;
+        height:65px;
+        top:20px;
+    }
+
+    .service-card__icon svg{
+        width:30px;
+        height:30px;
+    }
+}
+
+
+/* ===================================================
+   Mobile (Below 768px)
+=================================================== */
+
+@media (max-width:767px){
+
+    .service-card{
+        padding-top:90px;
+    }
+
+    .service-card__icon{
+        width:58px;
+        height:58px;
+        top:18px;
+    }
+
+    .service-card__icon svg{
+        width:26px;
+        height:26px;
+    }
+}
+
+
+/* ===================================================
+   Small Mobile (Below 480px)
+=================================================== */
+
+@media (max-width:480px){
+
+    .service-card{
+        padding-top:85px;
+    }
+
+    .service-card__icon{
+        width:52px;
+        height:52px;
+        top:16px;
+    }
+
+    .service-card__icon svg{
+        width:22px;
+        height:22px;
+    }
+}
+
+
+/* ===============================
+   WHITE & GRAY THEME
+=============================== */
+
+.service-card{
+    background:#ffffff;
+    border:1px solid #d1d5db;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    transition:all .4s ease;
+    color:#020b17;
+}
+
+/* Hover */
+.service-card:hover{
+    border-color:#d1d5db;
+    box-shadow:0 18px 40px rgba(107,114,128,.25);
+    transform:translateY(-8px);
+}
+
+/* Icon */
+.service-card__icon{
+    background:#ffffff;
+    color:#0b1f3a;
+    border:2px solid #d1d5db;
+    transition:.4s;
+}
+
+.service-card:hover .service-card__icon{
+    background:#ffffff;
+    color:#facc15;
+    border-color:#facc15;
+}
+
+/* Heading */
+.service-card h3{
+    color:#0b1f3a;
+    transition:.4s;
+}
+
+/* Heading Hover */
+.service-card:hover h3{
+    color:#facc15;      /* Yellow */
+}
+
+/* Paragraph */
+.service-card p{
+    color:darkslategrey;
+    transition:.4s;
+}
+
+/* Paragraph Hover */
+.service-card:hover p{
+    color:#facc15;      /* Yellow */
+}
+
+/* More Content */
+.service-card:hover h4,
+.service-card:hover li{
+    color:#facc15;      /* Yellow */
+}
+
+/* Optional white shine effect */
+.service-card::after{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-120%;
+    width:60%;
+    height:100%;
+    background:linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,.5),
+        transparent
+    );
+    transition:.8s;
+} 
+
+.service-card:hover::after{
+    left:150%;
+}
