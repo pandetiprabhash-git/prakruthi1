@@ -806,8 +806,7 @@
 <!--=========================================================
                         FOOTER
 ==========================================================-->
-
-
+<?php include 'assets/components/footer.php'; ?>
 <script src="assets/js/header.js"></script>
 <script src="assets/js/about.js"></script>
 
